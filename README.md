@@ -16,7 +16,7 @@ Instantly see and select your college on the Anti-Ragging website — no endless
 
 <br/>
 
-![demo](Screenshot%202025-02-14%20114631.png)
+![demo](Readmeimage.png)
 
 </div>
 
