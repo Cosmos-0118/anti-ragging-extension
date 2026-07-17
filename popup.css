@@ -36,6 +36,9 @@ body {
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 5px 10px;
@@ -44,6 +47,13 @@ body {
   border-left: 2px solid var(--border-light);
   border-right: 2px solid var(--border-dark);
   border-bottom: 2px solid var(--border-dark);
+}
+
+.header-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  image-rendering: pixelated;
 }
 
 .title {

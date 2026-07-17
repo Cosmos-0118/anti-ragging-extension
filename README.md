@@ -1,6 +1,24 @@
-# Anti-Ragging College Picker — Chrome Extension
+<div align="center">
 
-> A retro-styled Chrome extension that makes finding and selecting your college on the [Anti-Ragging Portal](https://www.antiragging.in/) fast and effortless.
+<img src="CollegeFinderIcon.png" alt="logo" width="88" style="border-radius:16px; margin-bottom:8px"/>
+
+# Anti-Ragging College Picker
+
+**A retro-styled Chrome extension that makes finding and selecting your college on the Anti-Ragging Portal fast and effortless.**
+
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-4f46e5?style=flat-square)](https://developer.chrome.com/docs/extensions/mv3/)
+[![Version](https://img.shields.io/badge/version-1.0-059669?style=flat-square)](#)
+[![License](https://img.shields.io/badge/license-MIT-gray?style=flat-square)](#license)
+
+Instantly see and select your college on the Anti-Ragging website — no endless scrolling.
+
+[Install](#installation) · [How to Use](#how-to-use) · [Privacy & Legal](#privacy--legal)
+
+<br/>
+
+![demo](Screenshot%202025-02-14%20114631.png)
+
+</div>
 
 ---
 

@@ -9,7 +9,13 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "College Picker"
+    "default_title": "College Picker",
+    "default_icon": "CollegeFinderIcon.png"
+  },
+  "icons": {
+    "16": "CollegeFinderIcon.png",
+    "48": "CollegeFinderIcon.png",
+    "128": "CollegeFinderIcon.png"
   },
   "content_scripts": [
     {
