@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Picker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">COLLEGE FINDER</h1>
+      <p class="subtitle">v1.0.0 [SYSTEM_READY]</p>
+    </header>
+    
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder=">_ SEARCH BY NAME OR CODE..." autocomplete="off" autofocus>
+    </div>
+
+    <div class="results-container">
+      <ul id="results-list" class="results-list">
+        <!-- Results will be injected here -->
+        <li class="loading">CONNECTING TO DATABANK...</li>
+      </ul>
+    </div>
+    
+    <footer class="footer">
+      <span id="status-message" class="status">AWAITING INPUT...</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

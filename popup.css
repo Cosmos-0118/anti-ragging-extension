@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --bg-color: #000080; /* Classic Win95 Blue */
+  --text-color: #ffffff;
+  --accent-color: #ffcc00;
+  --box-bg: #c0c0c0;
+  --box-text: #000000;
+  --border-light: #ffffff;
+  --border-dark: #808080;
+  --border-darkest: #000000;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background-color: var(--box-bg);
+  color: var(--box-text);
+  margin: 0;
+  padding: 8px;
+  width: 400px;
+  height: 500px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-darkest);
+  border-bottom: 2px solid var(--border-darkest);
+  padding: 10px;
+  background-color: var(--box-bg);
+}
+
+.header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-dark);
+  border-bottom: 2px solid var(--border-dark);
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.search-box {
+  margin-bottom: 10px;
+}
+
+#search-input {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  padding: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 2px solid var(--border-darkest);
+  border-left: 2px solid var(--border-darkest);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  outline: none;
+}
+
+#search-input:focus {
+  background-color: #ffffcc;
+}
+
+.results-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-top: 2px solid var(--border-darkest);
+  border-left: 2px solid var(--border-darkest);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  margin-bottom: 10px;
+}
+
+.results-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.results-list li {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px dashed #ccc;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.results-list li:hover, .results-list li.selected {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.results-list li.loading {
+  text-align: center;
+  color: var(--border-dark);
+  border: none;
+  padding-top: 20px;
+}
+
+.results-list li.no-results {
+  color: red;
+  text-align: center;
+  padding-top: 20px;
+  border: none;
+}
+
+.college-code {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.footer {
+  font-size: 16px;
+  border-top: 2px solid var(--border-dark);
+  border-left: 2px solid var(--border-dark);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  padding: 5px;
+  background-color: #dfdfdf;
+  text-align: center;
+}
+
+.status.success {
+  color: #008000;
+  font-weight: bold;
+}
+
+.status.error {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* Scrollbar styles for retro feel */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dfdfdf;
+  border-left: 1px solid var(--border-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--box-bg);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-darkest);
+  border-bottom: 2px solid var(--border-darkest);
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--box-bg);
+  height: 16px;
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-darkest);
+  border-bottom: 2px solid var(--border-darkest);
+}
