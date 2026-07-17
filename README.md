@@ -14,14 +14,6 @@ The official anti-ragging website requires students to manually scroll through *
 
 ---
 
-## 🖼️ Screenshot
-
-| Popup UI |
-|----------|
-| Retro Windows 95-inspired terminal interface |
-
----
-
 ## 🚀 Installation
 
 ### From Source (Developer Mode)
@@ -47,22 +39,6 @@ The official anti-ragging website requires students to manually scroll through *
 
 ---
 
-## 📂 Project Structure
-
-```
-anti-ragging-extension/
-├── manifest.json       # Chrome Extension manifest (MV3)
-├── popup.html          # Extension popup UI
-├── popup.css           # Retro-themed styles
-├── popup.js            # Search logic and UI rendering
-├── content.js          # Content script injected into web pages
-├── privacy.html        # Privacy Policy
-├── terms.html          # Terms of Service
-└── README.md           # You are here
-```
-
----
-
 ## 🔒 Privacy & Legal
 
 - [Privacy Policy](privacy.html) — We collect **zero** personal data.
@@ -70,35 +46,6 @@ anti-ragging-extension/
 
 ---
 
-## 🛠️ Tech Stack
-
-| Component        | Technology          |
-|------------------|---------------------|
-| Manifest         | Chrome MV3          |
-| UI               | HTML, CSS (VT323 font) |
-| Logic            | Vanilla JavaScript  |
-| Content Script   | DOM manipulation    |
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/awesome-feature`)
-3. Commit your changes (`git commit -m 'Add awesome feature'`)
-4. Push to the branch (`git push origin feature/awesome-feature`)
-5. Open a Pull Request
-
----
-
 ## 📄 License
 
 © 2026 Anti-Ragging College Picker. All rights reserved.
-
----
-
-## ⭐ Support
-
-If this extension helped you, consider giving it a ⭐ on GitHub!
