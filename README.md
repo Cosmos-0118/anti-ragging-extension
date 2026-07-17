@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="CollegeFinderIcon.png" alt="logo" width="88" style="border-radius:16px; margin-bottom:8px"/>
+<img src="assets/CollegeFinderIcon.png" alt="logo" width="88" style="border-radius:16px; margin-bottom:8px"/>
 
 # Anti-Ragging College Picker
 
@@ -16,7 +16,7 @@ Instantly see and select your college on the Anti-Ragging website — no endless
 
 <br/>
 
-![demo](Readmeimage.png)
+![demo](assets/Readmeimage.png)
 
 </div>
 
@@ -59,8 +59,8 @@ The official anti-ragging website requires students to manually scroll through *
 
 ## 🔒 Privacy & Legal
 
-- [Privacy Policy](privacy.html) — We collect **zero** personal data.
-- [Terms of Service](terms.html) — Use at your own discretion; provided as-is.
+- [Privacy Policy](src/legal/privacy.html) — We collect **zero** personal data.
+- [Terms of Service](src/legal/terms.html) — Use at your own discretion; provided as-is.
 
 ---
 

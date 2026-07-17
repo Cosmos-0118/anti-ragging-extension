@@ -8,19 +8,19 @@
     "scripting"
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup/popup.html",
     "default_title": "College Picker",
-    "default_icon": "CollegeFinderIcon.png"
+    "default_icon": "assets/CollegeFinderIcon.png"
   },
   "icons": {
-    "16": "CollegeFinderIcon.png",
-    "48": "CollegeFinderIcon.png",
-    "128": "CollegeFinderIcon.png"
+    "16": "assets/CollegeFinderIcon.png",
+    "48": "assets/CollegeFinderIcon.png",
+    "128": "assets/CollegeFinderIcon.png"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["src/content.js"]
     }
   ],
   "content_security_policy": {
