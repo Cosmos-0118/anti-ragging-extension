@@ -48,4 +48,4 @@ The official anti-ragging website requires students to manually scroll through *
 
 ## 📄 License
 
-© 2026 Anti-Ragging College Picker. All rights reserved.
+This project is licensed under the MIT License.
