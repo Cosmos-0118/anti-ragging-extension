@@ -19,7 +19,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.antiragging.in/*"],
       "js": ["src/content.js"]
     }
   ],
