@@ -7,7 +7,7 @@
 **A retro-styled Chrome extension that makes finding and selecting your college on the Anti-Ragging Portal fast and effortless.**
 
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-4f46e5?style=flat-square)](https://developer.chrome.com/docs/extensions/mv3/)
-[![Version](https://img.shields.io/badge/version-1.0-059669?style=flat-square)](#)
+[![Version](https://img.shields.io/badge/version-1.1-059669?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-gray?style=flat-square)](#license)
 
 Instantly see and select your college on the Anti-Ragging website — no endless scrolling.
@@ -29,6 +29,14 @@ The official anti-ragging website requires students to manually scroll through *
 - **Search by name** — Type any part of your college name and get results instantly.
 - **Search by code** — Enter the `C-XXXXX` or `U-XXXXX` code to jump straight to your institution.
 - **One-click selection** — Click a result and the extension automatically fills the dropdown on the page for you.
+
+---
+
+## ✨ What's New in 1.1
+
+- **Retro Win95 Interface**: A brand new nostalgic aesthetic with clean UI elements.
+- **Improved Site Support**: The extension now works seamlessly on both `antiragging.in` and `www.antiragging.in`.
+- **Enhanced Auto-Selection**: Robust runtime messaging guarantees your chosen college syncs instantly with the portal's dropdown.
 
 ---
 
