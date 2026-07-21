@@ -1,3 +1,56 @@
+// ===== Auto-apply saved college after state selection =====
+// The college dropdown loads dynamically after the user picks a state.
+// We use a MutationObserver to watch for new <option> elements being added
+// to any <select>, and auto-select the saved college when it appears.
+(function autoApplySavedSelection() {
+  chrome.storage.local.get('savedSelection', function (data) {
+    if (!data.savedSelection) return;
+
+    const saved = data.savedSelection;
+    let applied = false;
+
+    // Try to apply the saved value to any select that contains it
+    function scanAndApply() {
+      if (applied) return;
+
+      const selects = document.querySelectorAll('select');
+      selects.forEach(function (select) {
+        if (applied) return;
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.trim() === saved.value) {
+            select.value = saved.value;
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+            select.dispatchEvent(new Event('input', { bubbles: true }));
+            applied = true;
+            break;
+          }
+        }
+      });
+      return applied;
+    }
+
+    // Initial check in case options are already present
+    if (scanAndApply()) return;
+
+    // Watch for dynamically added options (loaded after state selection)
+    const observer = new MutationObserver(function () {
+      if (scanAndApply()) {
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body || document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+
+    // Safety: stop observing after 60s to prevent memory leaks
+    setTimeout(function () {
+      if (!applied) observer.disconnect();
+    }, 60000);
+  });
+})();
+
 // Listen for messages from the popup
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   
