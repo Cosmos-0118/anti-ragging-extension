@@ -1,0 +1,18 @@
+# Added by code-review-graph
+.code-review-graph/
+
+.claude/
+.cursor/
+.cursorrules
+.gemini/
+.github/code-review-graph.instruction.md
+.kiro/
+.mcp.json
+.opencode.json
+.qoder/
+.windsurfrules
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+QODER.md
+mcp.json
