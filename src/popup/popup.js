@@ -107,10 +107,8 @@ function selectItem(item, typeLabel) {
         statusMessage.textContent = `${typeLabel} SELECTED SUCCESSFULLY!`;
         statusMessage.className = 'status success';
         
-        // Optional: close the popup after a brief delay
-        setTimeout(() => {
-          window.close();
-        }, 1500);
+        // Show the save-details modal instead of auto-closing
+        showSaveModal(item, typeLabel);
       } else {
         statusMessage.textContent = `ERROR SELECTING ${typeLabel}.`;
         statusMessage.className = 'status error';
@@ -118,3 +116,39 @@ function selectItem(item, typeLabel) {
     });
   });
 }
+
+// ===== Save Details Modal =====
+const saveModalOverlay = document.getElementById('save-modal-overlay');
+const modalSaveBtn = document.getElementById('modal-save-btn');
+const modalSkipBtn = document.getElementById('modal-skip-btn');
+const modalCloseBtn = document.getElementById('modal-close-btn');
+
+let pendingSaveItem = null;
+
+function showSaveModal(item, typeLabel) {
+  pendingSaveItem = { value: item.value, text: item.text, selectId: item.selectId, typeLabel };
+  saveModalOverlay.classList.remove('hidden');
+}
+
+function hideModalAndClose() {
+  saveModalOverlay.classList.add('hidden');
+  pendingSaveItem = null;
+  setTimeout(() => window.close(), 400);
+}
+
+// SAVE button — persist to chrome.storage.local
+modalSaveBtn.addEventListener('click', function () {
+  if (pendingSaveItem) {
+    chrome.storage.local.set({ savedSelection: pendingSaveItem }, function () {
+      statusMessage.textContent = 'DETAILS SAVED! ✓';
+      hideModalAndClose();
+    });
+  }
+});
+
+// SKIP button — just close
+modalSkipBtn.addEventListener('click', hideModalAndClose);
+
+// ✕ titlebar button — same as skip
+modalCloseBtn.addEventListener('click', hideModalAndClose);
+

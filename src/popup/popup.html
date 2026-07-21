@@ -38,6 +38,25 @@
       </div>
     </footer>
   </div>
+
+  <!-- Save Details Modal (Win95-style dialog) -->
+  <div id="save-modal-overlay" class="modal-overlay hidden">
+    <div class="modal-dialog">
+      <div class="modal-titlebar">
+        <span class="modal-titlebar-text">💾 Save Details</span>
+        <button id="modal-close-btn" class="modal-titlebar-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-icon">📋</div>
+        <p class="modal-message">Save this selection for next time?<br><span class="modal-sub">Your college will be auto-filled when you open the anti-ragging form.</span></p>
+      </div>
+      <div class="modal-actions">
+        <button id="modal-save-btn" class="modal-btn modal-btn-primary">SAVE</button>
+        <button id="modal-skip-btn" class="modal-btn">SKIP</button>
+      </div>
+    </div>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
