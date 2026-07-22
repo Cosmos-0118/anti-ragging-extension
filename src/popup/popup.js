@@ -117,39 +117,4 @@ function selectItem(item, typeLabel) {
   });
 }
 
-// ===== Debug Scraper Modal =====
-const debugScrapeBtn = document.getElementById('debug-scrape-btn');
-const scrapeModalOverlay = document.getElementById('scrape-modal-overlay');
-const scrapeCopyBtn = document.getElementById('scrape-copy-btn');
-const scrapeCloseBtn = document.getElementById('scrape-modal-close-btn');
-const scrapeCloseBtn2 = document.getElementById('scrape-close-btn');
-const scrapeResultTextarea = document.getElementById('scrape-result-textarea');
-
-debugScrapeBtn.addEventListener('click', () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, { action: "SCRAPE_PAGE" }, function (response) {
-      if (chrome.runtime.lastError || !response || !response.scrapedData) {
-        scrapeResultTextarea.value = "ERROR: Could not scrape page. Make sure you are on the anti-ragging form page.";
-      } else {
-        scrapeResultTextarea.value = JSON.stringify(response.scrapedData, null, 2);
-      }
-      scrapeModalOverlay.classList.remove('hidden');
-    });
-  });
-});
-
-scrapeCopyBtn.addEventListener('click', () => {
-  scrapeResultTextarea.select();
-  document.execCommand('copy');
-  const originalText = scrapeCopyBtn.textContent;
-  scrapeCopyBtn.textContent = "COPIED!";
-  setTimeout(() => { scrapeCopyBtn.textContent = originalText; }, 2000);
-});
-
-function hideScrapeModal() {
-  scrapeModalOverlay.classList.add('hidden');
-}
-
-scrapeCloseBtn.addEventListener('click', hideScrapeModal);
-scrapeCloseBtn2.addEventListener('click', hideScrapeModal);
 

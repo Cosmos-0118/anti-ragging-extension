@@ -266,25 +266,6 @@ document.addEventListener('submit', function(e) {
 // Listen for messages from the popup
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   
-  if (request.action === "SCRAPE_PAGE") {
-    const inputs = document.querySelectorAll('input, select, textarea');
-    const scrapedData = [];
-    inputs.forEach(input => {
-      let options = undefined;
-      if (input.tagName === 'SELECT') {
-        options = Array.from(input.options).map(o => ({ value: o.value, text: o.text }));
-      }
-      scrapedData.push({
-        id: input.id,
-        name: input.name,
-        type: input.type || input.tagName,
-        value: input.value,
-        options: options
-      });
-    });
-    sendResponse({ scrapedData: scrapedData });
-    return true;
-  }
   
   if (request.action === "GET_COLLEGES") {
     // Find all select elements on the page to support both Universities and Colleges
