@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Anti-Ragging College Picker & Auto-Filler",
-  "version": "2.0",
-  "description": "An advanced search extension to easily find your college, plus instantly auto-fill and save your anti-ragging forms.",
+  "name": "Anti-Ragging College Picker",
+  "version": "1.1",
+  "description": "An advanced search extension to easily find and select your college on the anti-ragging website.",
   "permissions": [
     "activeTab",
     "scripting",
@@ -10,7 +10,7 @@
   ],
   "action": {
     "default_popup": "src/popup/popup.html",
-    "default_title": "College Picker & Auto-Filler",
+    "default_title": "College Picker",
     "default_icon": "assets/CollegeFinderIcon.png"
   },
   "icons": {

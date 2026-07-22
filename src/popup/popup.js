@@ -5,81 +5,29 @@ const searchInput = document.getElementById('search-input');
 const resultsList = document.getElementById('results-list');
 const statusMessage = document.getElementById('status-message');
 
-const collegePickerUi = document.getElementById('college-picker-ui');
-const autoFillerUi = document.getElementById('auto-filler-ui');
-
-// Check if we have saved form data
-chrome.storage.local.get('savedFormData', function(data) {
-  if (data.savedFormData && Object.keys(data.savedFormData).length > 0) {
-    // Show Auto-Filler Dashboard
-    collegePickerUi.classList.add('hidden');
-    autoFillerUi.classList.remove('hidden');
-    statusMessage.textContent = 'AUTO-FILLER ACTIVE';
-    statusMessage.className = 'status success';
-  } else {
-    // Show College Picker
-    autoFillerUi.classList.add('hidden');
-    collegePickerUi.classList.remove('hidden');
-    initCollegePicker();
-  }
-});
-
-document.getElementById('clear-data-btn').addEventListener('click', function() {
-  const btn = this;
+// Fetch data from the active tab when popup opens
+chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  const activeTab = tabs[0];
   
-  if (btn.textContent === '[ CLICK TO CONFIRM CLEAR ]') {
-    chrome.storage.local.remove('savedFormData', function() {
-      btn.textContent = '[ DATA CLEARED ✓ ]';
-      btn.style.color = '#0f0';
-      setTimeout(() => {
-        // Switch back to college picker
-        autoFillerUi.classList.add('hidden');
-        collegePickerUi.classList.remove('hidden');
-        btn.textContent = '[ CLEAR SAVED DATA ]';
-        btn.style.color = '';
-        initCollegePicker();
-      }, 1000);
-    });
-  } else {
-    btn.textContent = '[ CLICK TO CONFIRM CLEAR ]';
-    btn.style.color = '#f00';
-    setTimeout(() => {
-      if (btn.textContent === '[ CLICK TO CONFIRM CLEAR ]') {
-        btn.textContent = '[ CLEAR SAVED DATA ]';
-        btn.style.color = '';
-      }
-    }, 3000);
-  }
-});
-
-function initCollegePicker() {
-  statusMessage.textContent = 'AWAITING INPUT...';
-  statusMessage.className = 'status';
-  
-  // Fetch data from the active tab when popup opens
-  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    const activeTab = tabs[0];
+  chrome.tabs.sendMessage(activeTab.id, { action: "GET_COLLEGES" }, function (response) {
+    if (chrome.runtime.lastError) {
+      // Content script is not injected or page not fully loaded
+      resultsList.innerHTML = '<li class="error">ERROR: UNABLE TO CONNECT TO PAGE.<br>PLEASE REFRESH THE ANTI-RAGGING PAGE.</li>';
+      statusMessage.textContent = 'CONNECTION FAILED.';
+      statusMessage.className = 'status error';
+      return;
+    }
     
-    chrome.tabs.sendMessage(activeTab.id, { action: "GET_COLLEGES" }, function (response) {
-      if (chrome.runtime.lastError) {
-        // Content script is not injected or page not fully loaded
-        resultsList.innerHTML = '<li class="error">ERROR: UNABLE TO CONNECT TO PAGE.<br>PLEASE REFRESH THE ANTI-RAGGING PAGE.</li>';
-        statusMessage.textContent = 'CONNECTION FAILED.';
-        statusMessage.className = 'status error';
-        return;
-      }
-      
-      if (response && response.colleges && response.colleges.length > 0) {
-        allItems = response.colleges;
-        statusMessage.textContent = `${allItems.length} RECORDS FOUND.`;
-        renderResults(allItems.slice(0, 50)); // Show top 50 initially
-      } else {
-        resultsList.innerHTML = '<li class="no-results">NO DATA FOUND ON THIS PAGE.</li>';
-        statusMessage.textContent = 'NO DATA.';
-      }
-    });
+    if (response && response.colleges && response.colleges.length > 0) {
+      allItems = response.colleges;
+      statusMessage.textContent = `${allItems.length} RECORDS FOUND.`;
+      renderResults(allItems.slice(0, 50)); // Show top 50 initially
+    } else {
+      resultsList.innerHTML = '<li class="no-results">NO DATA FOUND ON THIS PAGE.</li>';
+      statusMessage.textContent = 'NO DATA.';
+    }
   });
-}
+});
 
 // Event listener for search input
 searchInput.addEventListener('input', function (e) {

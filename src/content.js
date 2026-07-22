@@ -266,7 +266,7 @@ document.addEventListener('submit', function(e) {
 // Listen for messages from the popup
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   
-  
+
   if (request.action === "GET_COLLEGES") {
     // Find all select elements on the page to support both Universities and Colleges
     const selects = document.querySelectorAll('select');
