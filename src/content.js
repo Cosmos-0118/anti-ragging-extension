@@ -1,4 +1,60 @@
 // ===== Global Form Auto-Save and Auto-Fill =====
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes siriGlow {
+    0% {
+      box-shadow: 0 0 10px rgba(52, 152, 219, 0.8), 0 0 20px rgba(155, 89, 182, 0.6);
+      border-color: rgba(52, 152, 219, 1);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(155, 89, 182, 0.9), 0 0 25px rgba(52, 152, 219, 0.7);
+      border-color: rgba(155, 89, 182, 1);
+    }
+    100% {
+      box-shadow: 0 0 0px transparent;
+    }
+  }
+  .ar-autofill-glow {
+    animation: siriGlow 2s ease-out forwards;
+    transition: all 0.3s ease;
+  }
+  
+  .ar-modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2147483647; opacity: 0; transition: opacity 0.3s ease;
+  }
+  .ar-modal-overlay.ar-show { opacity: 1; }
+  .ar-modal-box {
+    background: #fff; border-radius: 12px; padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 320px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .ar-modal-overlay.ar-show .ar-modal-box { transform: translateY(0); }
+  .ar-modal-title { font-size: 18px; font-weight: 600; color: #333; margin: 0 0 10px 0; }
+  .ar-modal-desc { font-size: 14px; color: #666; margin: 0 0 20px 0; }
+  .ar-modal-actions { display: flex; gap: 12px; justify-content: center; }
+  .ar-btn {
+    border: none; border-radius: 6px; padding: 10px 16px; font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .ar-btn-save { background: #3498db; color: #fff; }
+  .ar-btn-save:hover { background: #2980b9; }
+  .ar-btn-skip { background: #e0e0e0; color: #333; }
+  .ar-btn-skip:hover { background: #d0d0d0; }
+`;
+document.head.appendChild(style);
+
+function applyGlow(element) {
+  if (!element) return;
+  element.classList.add('ar-autofill-glow');
+  setTimeout(() => {
+    element.classList.remove('ar-autofill-glow');
+  }, 2000);
+}
+
 const formSchema = [
   { key: "firstname", id: "first_name", name: "firstname", type: "text" },
   { key: "midname", id: "middle_name", name: "midname", type: "text" },
@@ -73,6 +129,7 @@ function autoFillForm() {
           elToSelect.checked = true;
           elToSelect.dispatchEvent(new Event('change', { bubbles: true }));
           filled = true;
+          applyGlow(elToSelect.parentElement || elToSelect);
         } else if (elToSelect && elToSelect.checked) {
           filled = true;
         }
@@ -80,6 +137,7 @@ function autoFillForm() {
         if (elements[0].checked !== value) {
           elements[0].checked = value;
           elements[0].dispatchEvent(new Event('change', { bubbles: true }));
+          applyGlow(elements[0].parentElement || elements[0]);
         }
         filled = true;
       } else if (field.type === 'select-one') {
@@ -90,6 +148,7 @@ function autoFillForm() {
           el.dispatchEvent(new Event('change', { bubbles: true }));
           el.dispatchEvent(new Event('input', { bubbles: true }));
           filled = true;
+          applyGlow(el);
         }
       } else {
         const el = elements[0];
@@ -97,6 +156,7 @@ function autoFillForm() {
           el.value = value;
           el.dispatchEvent(new Event('change', { bubbles: true }));
           el.dispatchEvent(new Event('input', { bubbles: true }));
+          applyGlow(el);
         }
         filled = true;
       }
@@ -112,10 +172,72 @@ const observer = new MutationObserver(function() {
 observer.observe(document.body || document.documentElement, { childList: true, subtree: true });
 autoFillForm();
 
+function showCustomSaveModal(onSave, onSkip) {
+  const overlay = document.createElement('div');
+  overlay.className = 'ar-modal-overlay';
+  
+  const box = document.createElement('div');
+  box.className = 'ar-modal-box';
+  
+  const title = document.createElement('h3');
+  title.className = 'ar-modal-title';
+  title.innerText = 'Save Form Details?';
+  
+  const desc = document.createElement('p');
+  desc.className = 'ar-modal-desc';
+  desc.innerText = 'Would you like to securely save these details to quickly auto-fill them next time?';
+  
+  const actions = document.createElement('div');
+  actions.className = 'ar-modal-actions';
+  
+  const btnSave = document.createElement('button');
+  btnSave.className = 'ar-btn ar-btn-save';
+  btnSave.innerText = 'Save Details';
+  
+  const btnSkip = document.createElement('button');
+  btnSkip.className = 'ar-btn ar-btn-skip';
+  btnSkip.innerText = 'Skip';
+  
+  const cleanup = () => {
+    overlay.classList.remove('ar-show');
+    setTimeout(() => overlay.remove(), 300);
+  };
+  
+  btnSave.addEventListener('click', () => {
+    btnSave.innerText = 'Saving...';
+    onSave();
+    cleanup();
+  });
+  
+  btnSkip.addEventListener('click', () => {
+    onSkip();
+    cleanup();
+  });
+  
+  actions.appendChild(btnSkip);
+  actions.appendChild(btnSave);
+  box.appendChild(title);
+  box.appendChild(desc);
+  box.appendChild(actions);
+  overlay.appendChild(box);
+  
+  document.body.appendChild(overlay);
+  
+  requestAnimationFrame(() => {
+    overlay.classList.add('ar-show');
+  });
+}
+
+let isSubmitting = false;
+
 document.addEventListener('submit', function(e) {
+  if (isSubmitting) return;
+  
   if (e.target && e.target.tagName === 'FORM') {
-    const wantToSave = confirm("Anti-Ragging Extension: Do you want to save all form details for next time?");
-    if (wantToSave) {
+    e.preventDefault();
+    const form = e.target;
+    
+    showCustomSaveModal(() => {
       const formData = {};
       formSchema.forEach(field => {
         const elements = getElements(field);
@@ -130,8 +252,14 @@ document.addEventListener('submit', function(e) {
           formData[field.key] = elements[0].value;
         }
       });
-      chrome.storage.local.set({ savedFormData: formData });
-    }
+      chrome.storage.local.set({ savedFormData: formData }, () => {
+        isSubmitting = true;
+        form.submit();
+      });
+    }, () => {
+      isSubmitting = true;
+      form.submit();
+    });
   }
 });
 
