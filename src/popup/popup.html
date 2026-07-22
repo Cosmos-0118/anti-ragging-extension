@@ -39,20 +39,24 @@
     </footer>
   </div>
 
-  <!-- Save Details Modal (Win95-style dialog) -->
-  <div id="save-modal-overlay" class="modal-overlay hidden">
-    <div class="modal-dialog">
+  <!-- Debug Scraper Button (Temporary) -->
+  <div style="text-align: center; margin-bottom: 10px;">
+    <button id="debug-scrape-btn" class="modal-btn" style="width: 90%; font-size: 10px; padding: 4px;">[DEBUG] SCRAPE FORM DETAILS</button>
+  </div>
+
+  <!-- Scraper Modal -->
+  <div id="scrape-modal-overlay" class="modal-overlay hidden">
+    <div class="modal-dialog" style="width: 90%; max-width: 400px;">
       <div class="modal-titlebar">
-        <span class="modal-titlebar-text">💾 Save Details</span>
-        <button id="modal-close-btn" class="modal-titlebar-close">✕</button>
+        <span class="modal-titlebar-text">🕷️ Scraped Details</span>
+        <button id="scrape-modal-close-btn" class="modal-titlebar-close">✕</button>
       </div>
-      <div class="modal-body">
-        <div class="modal-icon">📋</div>
-        <p class="modal-message">Save this selection for next time?<br><span class="modal-sub">Your college will be auto-filled when you open the anti-ragging form.</span></p>
+      <div class="modal-body" style="padding: 10px;">
+        <textarea id="scrape-result-textarea" readonly style="width: 100%; height: 150px; font-family: monospace; font-size: 10px; background: #000; color: #0f0; border: 1px solid #333; padding: 5px;"></textarea>
       </div>
       <div class="modal-actions">
-        <button id="modal-save-btn" class="modal-btn modal-btn-primary">SAVE</button>
-        <button id="modal-skip-btn" class="modal-btn">SKIP</button>
+        <button id="scrape-copy-btn" class="modal-btn modal-btn-primary">COPY JSON</button>
+        <button id="scrape-close-btn" class="modal-btn">CLOSE</button>
       </div>
     </div>
   </div>

@@ -1,0 +1,1591 @@
+[
+  {
+    "id": "first_name",
+    "name": "firstname",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "middle_name",
+    "name": "midname",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "surname",
+    "name": "surname",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "mobile",
+    "name": "mobile",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "email",
+    "name": "email",
+    "type": "email",
+    "value": ""
+  },
+  {
+    "id": "gender",
+    "name": "gender",
+    "type": "select-one",
+    "value": "male",
+    "options": [
+      {
+        "value": "male",
+        "text": "Male"
+      },
+      {
+        "value": "female",
+        "text": "Female"
+      },
+      {
+        "value": "other",
+        "text": "Other"
+      }
+    ]
+  },
+  {
+    "id": "city",
+    "name": "city",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "state",
+    "name": "state",
+    "type": "select-one",
+    "value": "",
+    "options": [
+      {
+        "value": "",
+        "text": "Select State"
+      },
+      {
+        "value": "ANDAMAN AND NICOBAR ISLANDS",
+        "text": "ANDAMAN AND NICOBAR ISLANDS"
+      },
+      {
+        "value": "ANDHRA PRADESH",
+        "text": "ANDHRA PRADESH"
+      },
+      {
+        "value": "ARUNACHAL PRADESH",
+        "text": "ARUNACHAL PRADESH"
+      },
+      {
+        "value": "ASSAM",
+        "text": "ASSAM"
+      },
+      {
+        "value": "BIHAR",
+        "text": "BIHAR"
+      },
+      {
+        "value": "CHHATTISGARH",
+        "text": "CHHATTISGARH"
+      },
+      {
+        "value": "CHANDIGARH",
+        "text": "CHANDIGARH"
+      },
+      {
+        "value": "DELHI",
+        "text": "DELHI"
+      },
+      {
+        "value": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+        "text": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU"
+      },
+      {
+        "value": "GOA",
+        "text": "GOA"
+      },
+      {
+        "value": "GUJARAT",
+        "text": "GUJARAT"
+      },
+      {
+        "value": "HIMACHAL PRADESH",
+        "text": "HIMACHAL PRADESH"
+      },
+      {
+        "value": "HARYANA",
+        "text": "HARYANA"
+      },
+      {
+        "value": "JAMMU AND KASHMIR",
+        "text": "JAMMU AND KASHMIR"
+      },
+      {
+        "value": "JHARKHAND",
+        "text": "JHARKHAND"
+      },
+      {
+        "value": "KERALA",
+        "text": "KERALA"
+      },
+      {
+        "value": "KARNATAKA",
+        "text": "KARNATAKA"
+      },
+      {
+        "value": "LAKSHADWEEP",
+        "text": "LAKSHADWEEP"
+      },
+      {
+        "value": "MEGHALAYA",
+        "text": "MEGHALAYA"
+      },
+      {
+        "value": "MAHARASHTRA",
+        "text": "MAHARASHTRA"
+      },
+      {
+        "value": "MANIPUR",
+        "text": "MANIPUR"
+      },
+      {
+        "value": "MADHYA PRADESH",
+        "text": "MADHYA PRADESH"
+      },
+      {
+        "value": "MIZORAM",
+        "text": "MIZORAM"
+      },
+      {
+        "value": "NAGALAND",
+        "text": "NAGALAND"
+      },
+      {
+        "value": "ODISHA",
+        "text": "ODISHA"
+      },
+      {
+        "value": "PUNJAB",
+        "text": "PUNJAB"
+      },
+      {
+        "value": "PUDUCHERRY",
+        "text": "PUDUCHERRY"
+      },
+      {
+        "value": "RAJASTHAN",
+        "text": "RAJASTHAN"
+      },
+      {
+        "value": "SIKKIM",
+        "text": "SIKKIM"
+      },
+      {
+        "value": "TAMIL NADU",
+        "text": "TAMIL NADU"
+      },
+      {
+        "value": "TRIPURA",
+        "text": "TRIPURA"
+      },
+      {
+        "value": "UTTARAKHAND",
+        "text": "UTTARAKHAND"
+      },
+      {
+        "value": "UTTAR PRADESH",
+        "text": "UTTAR PRADESH"
+      },
+      {
+        "value": "WEST BENGAL",
+        "text": "WEST BENGAL"
+      },
+      {
+        "value": "TELANGANA",
+        "text": "TELANGANA"
+      },
+      {
+        "value": "LADAKH",
+        "text": "LADAKH"
+      }
+    ]
+  },
+  {
+    "id": "nationality",
+    "name": "nationality",
+    "type": "select-one",
+    "value": "Indian",
+    "options": [
+      {
+        "value": "Indian",
+        "text": "Indian"
+      },
+      {
+        "value": "Afghan",
+        "text": "Afghan"
+      },
+      {
+        "value": "Albanian",
+        "text": "Albanian"
+      },
+      {
+        "value": "Algerian",
+        "text": "Algerian"
+      },
+      {
+        "value": "American",
+        "text": "American"
+      },
+      {
+        "value": "Andorran",
+        "text": "Andorran"
+      },
+      {
+        "value": "Angolan",
+        "text": "Angolan"
+      },
+      {
+        "value": "Antiguans",
+        "text": "Antiguans"
+      },
+      {
+        "value": "Argentinean",
+        "text": "Argentinean"
+      },
+      {
+        "value": "Armenian",
+        "text": "Armenian"
+      },
+      {
+        "value": "Australian",
+        "text": "Australian"
+      },
+      {
+        "value": "Austrian",
+        "text": "Austrian"
+      },
+      {
+        "value": "Azerbaijani",
+        "text": "Azerbaijani"
+      },
+      {
+        "value": "Bahamian",
+        "text": "Bahamian"
+      },
+      {
+        "value": "Bahraini",
+        "text": "Bahraini"
+      },
+      {
+        "value": "Bangladeshi",
+        "text": "Bangladeshi"
+      },
+      {
+        "value": "Barbadian",
+        "text": "Barbadian"
+      },
+      {
+        "value": "Barbudans",
+        "text": "Barbudans"
+      },
+      {
+        "value": "Batswana",
+        "text": "Batswana"
+      },
+      {
+        "value": "Belarusian",
+        "text": "Belarusian"
+      },
+      {
+        "value": "Belgian",
+        "text": "Belgian"
+      },
+      {
+        "value": "Belizean",
+        "text": "Belizean"
+      },
+      {
+        "value": "Beninese",
+        "text": "Beninese"
+      },
+      {
+        "value": "Bhutanese",
+        "text": "Bhutanese"
+      },
+      {
+        "value": "Bolivian",
+        "text": "Bolivian"
+      },
+      {
+        "value": "Bosnian",
+        "text": "Bosnian"
+      },
+      {
+        "value": "Brazilian",
+        "text": "Brazilian"
+      },
+      {
+        "value": "British",
+        "text": "British"
+      },
+      {
+        "value": "Bruneian",
+        "text": "Bruneian"
+      },
+      {
+        "value": "Bulgarian",
+        "text": "Bulgarian"
+      },
+      {
+        "value": "Burkinabe",
+        "text": "Burkinabe"
+      },
+      {
+        "value": "Burmese",
+        "text": "Burmese"
+      },
+      {
+        "value": "Burundian",
+        "text": "Burundian"
+      },
+      {
+        "value": "Cambodian",
+        "text": "Cambodian"
+      },
+      {
+        "value": "Cameroonian",
+        "text": "Cameroonian"
+      },
+      {
+        "value": "Canadian",
+        "text": "Canadian"
+      },
+      {
+        "value": "Cape Verdean",
+        "text": "Cape Verdean"
+      },
+      {
+        "value": "Central African",
+        "text": "Central African"
+      },
+      {
+        "value": "Chadian",
+        "text": "Chadian"
+      },
+      {
+        "value": "Chilean",
+        "text": "Chilean"
+      },
+      {
+        "value": "Chinese",
+        "text": "Chinese"
+      },
+      {
+        "value": "Colombian",
+        "text": "Colombian"
+      },
+      {
+        "value": "Comoran",
+        "text": "Comoran"
+      },
+      {
+        "value": "Congolese",
+        "text": "Congolese"
+      },
+      {
+        "value": "Congolese",
+        "text": "Congolese"
+      },
+      {
+        "value": "Costa Rican",
+        "text": "Costa Rican"
+      },
+      {
+        "value": "Croatian",
+        "text": "Croatian"
+      },
+      {
+        "value": "Cuban",
+        "text": "Cuban"
+      },
+      {
+        "value": "Cypriot",
+        "text": "Cypriot"
+      },
+      {
+        "value": "Czech",
+        "text": "Czech"
+      },
+      {
+        "value": "Danish",
+        "text": "Danish"
+      },
+      {
+        "value": "Djibouti",
+        "text": "Djibouti"
+      },
+      {
+        "value": "Dominican",
+        "text": "Dominican"
+      },
+      {
+        "value": "Dominican",
+        "text": "Dominican"
+      },
+      {
+        "value": "Dutch",
+        "text": "Dutch"
+      },
+      {
+        "value": "Dutchman",
+        "text": "Dutchman"
+      },
+      {
+        "value": "Dutchwoman",
+        "text": "Dutchwoman"
+      },
+      {
+        "value": "East Timorese",
+        "text": "East Timorese"
+      },
+      {
+        "value": "Ecuadorean",
+        "text": "Ecuadorean"
+      },
+      {
+        "value": "Egyptian",
+        "text": "Egyptian"
+      },
+      {
+        "value": "Emirian",
+        "text": "Emirian"
+      },
+      {
+        "value": "Equatorial Guinean",
+        "text": "Equatorial Guinean"
+      },
+      {
+        "value": "Eritrean",
+        "text": "Eritrean"
+      },
+      {
+        "value": "Estonian",
+        "text": "Estonian"
+      },
+      {
+        "value": "Ethiopian",
+        "text": "Ethiopian"
+      },
+      {
+        "value": "Fijian",
+        "text": "Fijian"
+      },
+      {
+        "value": "Filipino",
+        "text": "Filipino"
+      },
+      {
+        "value": "Finnish",
+        "text": "Finnish"
+      },
+      {
+        "value": "French",
+        "text": "French"
+      },
+      {
+        "value": "Gabonese",
+        "text": "Gabonese"
+      },
+      {
+        "value": "Gambian",
+        "text": "Gambian"
+      },
+      {
+        "value": "Georgian",
+        "text": "Georgian"
+      },
+      {
+        "value": "German",
+        "text": "German"
+      },
+      {
+        "value": "Ghanaian",
+        "text": "Ghanaian"
+      },
+      {
+        "value": "Greek",
+        "text": "Greek"
+      },
+      {
+        "value": "Grenadian",
+        "text": "Grenadian"
+      },
+      {
+        "value": "Guatemalan",
+        "text": "Guatemalan"
+      },
+      {
+        "value": "Guinea-Bissauan",
+        "text": "Guinea-Bissauan"
+      },
+      {
+        "value": "Guinean",
+        "text": "Guinean"
+      },
+      {
+        "value": "Guyanese",
+        "text": "Guyanese"
+      },
+      {
+        "value": "Haitian",
+        "text": "Haitian"
+      },
+      {
+        "value": "Herzegovinian",
+        "text": "Herzegovinian"
+      },
+      {
+        "value": "Honduran",
+        "text": "Honduran"
+      },
+      {
+        "value": "Hungarian",
+        "text": "Hungarian"
+      },
+      {
+        "value": "I-Kiribati",
+        "text": "I-Kiribati"
+      },
+      {
+        "value": "Icelander",
+        "text": "Icelander"
+      },
+      {
+        "value": "Indian",
+        "text": "Indian"
+      },
+      {
+        "value": "Indonesian",
+        "text": "Indonesian"
+      },
+      {
+        "value": "Iranian",
+        "text": "Iranian"
+      },
+      {
+        "value": "Iraqi",
+        "text": "Iraqi"
+      },
+      {
+        "value": "Irish",
+        "text": "Irish"
+      },
+      {
+        "value": "Irish",
+        "text": "Irish"
+      },
+      {
+        "value": "Israeli",
+        "text": "Israeli"
+      },
+      {
+        "value": "Italian",
+        "text": "Italian"
+      },
+      {
+        "value": "Ivorian",
+        "text": "Ivorian"
+      },
+      {
+        "value": "Jamaican",
+        "text": "Jamaican"
+      },
+      {
+        "value": "Japanese",
+        "text": "Japanese"
+      },
+      {
+        "value": "Jordanian",
+        "text": "Jordanian"
+      },
+      {
+        "value": "Kazakhstani",
+        "text": "Kazakhstani"
+      },
+      {
+        "value": "Kenyan",
+        "text": "Kenyan"
+      },
+      {
+        "value": "Kittian and Nevisian",
+        "text": "Kittian and Nevisian"
+      },
+      {
+        "value": "Kuwaiti",
+        "text": "Kuwaiti"
+      },
+      {
+        "value": "Kyrgyz",
+        "text": "Kyrgyz"
+      },
+      {
+        "value": "Laotian",
+        "text": "Laotian"
+      },
+      {
+        "value": "Latvian",
+        "text": "Latvian"
+      },
+      {
+        "value": "Lebanese",
+        "text": "Lebanese"
+      },
+      {
+        "value": "Liberian",
+        "text": "Liberian"
+      },
+      {
+        "value": "Libyan",
+        "text": "Libyan"
+      },
+      {
+        "value": "Liechtensteiner",
+        "text": "Liechtensteiner"
+      },
+      {
+        "value": "Lithuanian",
+        "text": "Lithuanian"
+      },
+      {
+        "value": "Luxembourger",
+        "text": "Luxembourger"
+      },
+      {
+        "value": "Macedonian",
+        "text": "Macedonian"
+      },
+      {
+        "value": "Malagasy",
+        "text": "Malagasy"
+      },
+      {
+        "value": "Malawian",
+        "text": "Malawian"
+      },
+      {
+        "value": "Malaysian",
+        "text": "Malaysian"
+      },
+      {
+        "value": "Maldivan",
+        "text": "Maldivan"
+      },
+      {
+        "value": "Malian",
+        "text": "Malian"
+      },
+      {
+        "value": "Maltese",
+        "text": "Maltese"
+      },
+      {
+        "value": "Marshallese",
+        "text": "Marshallese"
+      },
+      {
+        "value": "Mauritanian",
+        "text": "Mauritanian"
+      },
+      {
+        "value": "Mauritian",
+        "text": "Mauritian"
+      },
+      {
+        "value": "Mexican",
+        "text": "Mexican"
+      },
+      {
+        "value": "Micronesian",
+        "text": "Micronesian"
+      },
+      {
+        "value": "Moldovan",
+        "text": "Moldovan"
+      },
+      {
+        "value": "Monacan",
+        "text": "Monacan"
+      },
+      {
+        "value": "Mongolian",
+        "text": "Mongolian"
+      },
+      {
+        "value": "Moroccan",
+        "text": "Moroccan"
+      },
+      {
+        "value": "Mosotho",
+        "text": "Mosotho"
+      },
+      {
+        "value": "Motswana",
+        "text": "Motswana"
+      },
+      {
+        "value": "Mozambican",
+        "text": "Mozambican"
+      },
+      {
+        "value": "Namibian",
+        "text": "Namibian"
+      },
+      {
+        "value": "Nauruan",
+        "text": "Nauruan"
+      },
+      {
+        "value": "Nepalese",
+        "text": "Nepalese"
+      },
+      {
+        "value": "Netherlander",
+        "text": "Netherlander"
+      },
+      {
+        "value": "New Zealander",
+        "text": "New Zealander"
+      },
+      {
+        "value": "Ni-Vanuatu",
+        "text": "Ni-Vanuatu"
+      },
+      {
+        "value": "Nicaraguan",
+        "text": "Nicaraguan"
+      },
+      {
+        "value": "Nigerian",
+        "text": "Nigerian"
+      },
+      {
+        "value": "Nigerien",
+        "text": "Nigerien"
+      },
+      {
+        "value": "North Korean",
+        "text": "North Korean"
+      },
+      {
+        "value": "Northern Irish",
+        "text": "Northern Irish"
+      },
+      {
+        "value": "Norwegian",
+        "text": "Norwegian"
+      },
+      {
+        "value": "Omani",
+        "text": "Omani"
+      },
+      {
+        "value": "Pakistani",
+        "text": "Pakistani"
+      },
+      {
+        "value": "Palauan",
+        "text": "Palauan"
+      },
+      {
+        "value": "Panamanian",
+        "text": "Panamanian"
+      },
+      {
+        "value": "Papua New Guinean",
+        "text": "Papua New Guinean"
+      },
+      {
+        "value": "Paraguayan",
+        "text": "Paraguayan"
+      },
+      {
+        "value": "Peruvian",
+        "text": "Peruvian"
+      },
+      {
+        "value": "Polish",
+        "text": "Polish"
+      },
+      {
+        "value": "Portuguese",
+        "text": "Portuguese"
+      },
+      {
+        "value": "Qatari",
+        "text": "Qatari"
+      },
+      {
+        "value": "Romanian",
+        "text": "Romanian"
+      },
+      {
+        "value": "Russian",
+        "text": "Russian"
+      },
+      {
+        "value": "Rwandan",
+        "text": "Rwandan"
+      },
+      {
+        "value": "Saint Lucian",
+        "text": "Saint Lucian"
+      },
+      {
+        "value": "Salvadoran",
+        "text": "Salvadoran"
+      },
+      {
+        "value": "Samoan",
+        "text": "Samoan"
+      },
+      {
+        "value": "San Marinese",
+        "text": "San Marinese"
+      },
+      {
+        "value": "Sao Tomean",
+        "text": "Sao Tomean"
+      },
+      {
+        "value": "Saudi",
+        "text": "Saudi"
+      },
+      {
+        "value": "Scottish",
+        "text": "Scottish"
+      },
+      {
+        "value": "Senegalese",
+        "text": "Senegalese"
+      },
+      {
+        "value": "Serbian",
+        "text": "Serbian"
+      },
+      {
+        "value": "Seychellois",
+        "text": "Seychellois"
+      },
+      {
+        "value": "Sierra Leonean",
+        "text": "Sierra Leonean"
+      },
+      {
+        "value": "Singaporean",
+        "text": "Singaporean"
+      },
+      {
+        "value": "Slovakian",
+        "text": "Slovakian"
+      },
+      {
+        "value": "Slovenian",
+        "text": "Slovenian"
+      },
+      {
+        "value": "Solomon Islander",
+        "text": "Solomon Islander"
+      },
+      {
+        "value": "Somali",
+        "text": "Somali"
+      },
+      {
+        "value": "South African",
+        "text": "South African"
+      },
+      {
+        "value": "South Korean",
+        "text": "South Korean"
+      },
+      {
+        "value": "Spanish",
+        "text": "Spanish"
+      },
+      {
+        "value": "Sri Lankan",
+        "text": "Sri Lankan"
+      },
+      {
+        "value": "Sudanese",
+        "text": "Sudanese"
+      },
+      {
+        "value": "Surinamer",
+        "text": "Surinamer"
+      },
+      {
+        "value": "Swazi",
+        "text": "Swazi"
+      },
+      {
+        "value": "Swedish",
+        "text": "Swedish"
+      },
+      {
+        "value": "Swiss",
+        "text": "Swiss"
+      },
+      {
+        "value": "Syrian",
+        "text": "Syrian"
+      },
+      {
+        "value": "Taiwanese",
+        "text": "Taiwanese"
+      },
+      {
+        "value": "Tajik",
+        "text": "Tajik"
+      },
+      {
+        "value": "Tanzanian",
+        "text": "Tanzanian"
+      },
+      {
+        "value": "Thai",
+        "text": "Thai"
+      },
+      {
+        "value": "Togolese",
+        "text": "Togolese"
+      },
+      {
+        "value": "Tongan",
+        "text": "Tongan"
+      },
+      {
+        "value": "Trinidadian or Tobagonian",
+        "text": "Trinidadian or Tobagonian"
+      },
+      {
+        "value": "Tunisian",
+        "text": "Tunisian"
+      },
+      {
+        "value": "Turkish",
+        "text": "Turkish"
+      },
+      {
+        "value": "Tuvaluan",
+        "text": "Tuvaluan"
+      },
+      {
+        "value": "Ugandan",
+        "text": "Ugandan"
+      },
+      {
+        "value": "Ukrainian",
+        "text": "Ukrainian"
+      },
+      {
+        "value": "Uruguayan",
+        "text": "Uruguayan"
+      },
+      {
+        "value": "Uzbekistani",
+        "text": "Uzbekistani"
+      },
+      {
+        "value": "Venezuelan",
+        "text": "Venezuelan"
+      },
+      {
+        "value": "Vietnamese",
+        "text": "Vietnamese"
+      },
+      {
+        "value": "Welsh",
+        "text": "Welsh"
+      },
+      {
+        "value": "Yemenite",
+        "text": "Yemenite"
+      },
+      {
+        "value": "Zambian",
+        "text": "Zambian"
+      },
+      {
+        "value": "Zimbabwean",
+        "text": "Zimbabwean"
+      }
+    ]
+  },
+  {
+    "id": "pr_name",
+    "name": "pr_name",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "pr_number",
+    "name": "pr_number",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "pr_email",
+    "name": "pr_email",
+    "type": "email",
+    "value": ""
+  },
+  {
+    "id": "pr_city",
+    "name": "pr_city",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "pr_state",
+    "name": "pr_state",
+    "type": "select-one",
+    "value": "",
+    "options": [
+      {
+        "value": "",
+        "text": "Select State"
+      },
+      {
+        "value": "ANDAMAN AND NICOBAR ISLANDS",
+        "text": "ANDAMAN AND NICOBAR ISLANDS"
+      },
+      {
+        "value": "ANDHRA PRADESH",
+        "text": "ANDHRA PRADESH"
+      },
+      {
+        "value": "ARUNACHAL PRADESH",
+        "text": "ARUNACHAL PRADESH"
+      },
+      {
+        "value": "ASSAM",
+        "text": "ASSAM"
+      },
+      {
+        "value": "BIHAR",
+        "text": "BIHAR"
+      },
+      {
+        "value": "CHHATTISGARH",
+        "text": "CHHATTISGARH"
+      },
+      {
+        "value": "CHANDIGARH",
+        "text": "CHANDIGARH"
+      },
+      {
+        "value": "DELHI",
+        "text": "DELHI"
+      },
+      {
+        "value": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+        "text": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU"
+      },
+      {
+        "value": "GOA",
+        "text": "GOA"
+      },
+      {
+        "value": "GUJARAT",
+        "text": "GUJARAT"
+      },
+      {
+        "value": "HIMACHAL PRADESH",
+        "text": "HIMACHAL PRADESH"
+      },
+      {
+        "value": "HARYANA",
+        "text": "HARYANA"
+      },
+      {
+        "value": "JAMMU AND KASHMIR",
+        "text": "JAMMU AND KASHMIR"
+      },
+      {
+        "value": "JHARKHAND",
+        "text": "JHARKHAND"
+      },
+      {
+        "value": "KERALA",
+        "text": "KERALA"
+      },
+      {
+        "value": "KARNATAKA",
+        "text": "KARNATAKA"
+      },
+      {
+        "value": "LAKSHADWEEP",
+        "text": "LAKSHADWEEP"
+      },
+      {
+        "value": "MEGHALAYA",
+        "text": "MEGHALAYA"
+      },
+      {
+        "value": "MAHARASHTRA",
+        "text": "MAHARASHTRA"
+      },
+      {
+        "value": "MANIPUR",
+        "text": "MANIPUR"
+      },
+      {
+        "value": "MADHYA PRADESH",
+        "text": "MADHYA PRADESH"
+      },
+      {
+        "value": "MIZORAM",
+        "text": "MIZORAM"
+      },
+      {
+        "value": "NAGALAND",
+        "text": "NAGALAND"
+      },
+      {
+        "value": "ODISHA",
+        "text": "ODISHA"
+      },
+      {
+        "value": "PUNJAB",
+        "text": "PUNJAB"
+      },
+      {
+        "value": "PUDUCHERRY",
+        "text": "PUDUCHERRY"
+      },
+      {
+        "value": "RAJASTHAN",
+        "text": "RAJASTHAN"
+      },
+      {
+        "value": "SIKKIM",
+        "text": "SIKKIM"
+      },
+      {
+        "value": "TAMIL NADU",
+        "text": "TAMIL NADU"
+      },
+      {
+        "value": "TRIPURA",
+        "text": "TRIPURA"
+      },
+      {
+        "value": "UTTARAKHAND",
+        "text": "UTTARAKHAND"
+      },
+      {
+        "value": "UTTAR PRADESH",
+        "text": "UTTAR PRADESH"
+      },
+      {
+        "value": "WEST BENGAL",
+        "text": "WEST BENGAL"
+      },
+      {
+        "value": "TELANGANA",
+        "text": "TELANGANA"
+      },
+      {
+        "value": "LADAKH",
+        "text": "LADAKH"
+      }
+    ]
+  },
+  {
+    "id": "pr_address",
+    "name": "pr_address",
+    "type": "textarea",
+    "value": ""
+  },
+  {
+    "id": "cl_state",
+    "name": "cl_state",
+    "type": "select-one",
+    "value": "",
+    "options": [
+      {
+        "value": "",
+        "text": "Select State"
+      },
+      {
+        "value": "ANDAMAN AND NICOBAR ISLANDS",
+        "text": "ANDAMAN AND NICOBAR ISLANDS"
+      },
+      {
+        "value": "ANDHRA PRADESH",
+        "text": "ANDHRA PRADESH"
+      },
+      {
+        "value": "ARUNACHAL PRADESH",
+        "text": "ARUNACHAL PRADESH"
+      },
+      {
+        "value": "ASSAM",
+        "text": "ASSAM"
+      },
+      {
+        "value": "BIHAR",
+        "text": "BIHAR"
+      },
+      {
+        "value": "CHHATTISGARH",
+        "text": "CHHATTISGARH"
+      },
+      {
+        "value": "CHANDIGARH",
+        "text": "CHANDIGARH"
+      },
+      {
+        "value": "DELHI",
+        "text": "DELHI"
+      },
+      {
+        "value": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+        "text": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU"
+      },
+      {
+        "value": "GOA",
+        "text": "GOA"
+      },
+      {
+        "value": "GUJARAT",
+        "text": "GUJARAT"
+      },
+      {
+        "value": "HIMACHAL PRADESH",
+        "text": "HIMACHAL PRADESH"
+      },
+      {
+        "value": "HARYANA",
+        "text": "HARYANA"
+      },
+      {
+        "value": "JAMMU AND KASHMIR",
+        "text": "JAMMU AND KASHMIR"
+      },
+      {
+        "value": "JHARKHAND",
+        "text": "JHARKHAND"
+      },
+      {
+        "value": "KERALA",
+        "text": "KERALA"
+      },
+      {
+        "value": "KARNATAKA",
+        "text": "KARNATAKA"
+      },
+      {
+        "value": "LAKSHADWEEP",
+        "text": "LAKSHADWEEP"
+      },
+      {
+        "value": "MEGHALAYA",
+        "text": "MEGHALAYA"
+      },
+      {
+        "value": "MAHARASHTRA",
+        "text": "MAHARASHTRA"
+      },
+      {
+        "value": "MANIPUR",
+        "text": "MANIPUR"
+      },
+      {
+        "value": "MADHYA PRADESH",
+        "text": "MADHYA PRADESH"
+      },
+      {
+        "value": "MIZORAM",
+        "text": "MIZORAM"
+      },
+      {
+        "value": "NAGALAND",
+        "text": "NAGALAND"
+      },
+      {
+        "value": "ODISHA",
+        "text": "ODISHA"
+      },
+      {
+        "value": "PUNJAB",
+        "text": "PUNJAB"
+      },
+      {
+        "value": "PUDUCHERRY",
+        "text": "PUDUCHERRY"
+      },
+      {
+        "value": "RAJASTHAN",
+        "text": "RAJASTHAN"
+      },
+      {
+        "value": "SIKKIM",
+        "text": "SIKKIM"
+      },
+      {
+        "value": "TAMIL NADU",
+        "text": "TAMIL NADU"
+      },
+      {
+        "value": "TRIPURA",
+        "text": "TRIPURA"
+      },
+      {
+        "value": "UTTARAKHAND",
+        "text": "UTTARAKHAND"
+      },
+      {
+        "value": "UTTAR PRADESH",
+        "text": "UTTAR PRADESH"
+      },
+      {
+        "value": "WEST BENGAL",
+        "text": "WEST BENGAL"
+      },
+      {
+        "value": "TELANGANA",
+        "text": "TELANGANA"
+      },
+      {
+        "value": "LADAKH",
+        "text": "LADAKH"
+      }
+    ]
+  },
+  {
+    "id": "cl_name",
+    "name": "",
+    "type": "select-one",
+    "value": "",
+    "options": []
+  },
+  {
+    "id": "dir_title",
+    "name": "dir_title",
+    "type": "select-one",
+    "value": "Dr.",
+    "options": [
+      {
+        "value": "Dr.",
+        "text": "Dr."
+      },
+      {
+        "value": "Prof.",
+        "text": "Prof."
+      },
+      {
+        "value": "Mr.",
+        "text": "Mr."
+      },
+      {
+        "value": "Mrs.",
+        "text": "Mrs."
+      }
+    ]
+  },
+  {
+    "id": "dir_name",
+    "name": "dir_name",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "cl__phone",
+    "name": "cl_phone",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "cl__landline",
+    "name": "cl_landline",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "crs_cat",
+    "name": "crs_cat",
+    "type": "select-one",
+    "value": "",
+    "options": [
+      {
+        "value": "",
+        "text": "Select"
+      },
+      {
+        "value": "Under Graduate Diploma",
+        "text": "Under Graduate Diploma"
+      },
+      {
+        "value": "Post Graduate Diploma",
+        "text": "Post Graduate Diploma"
+      },
+      {
+        "value": "Under Graduate Degree",
+        "text": "Under Graduate Degree"
+      },
+      {
+        "value": "Post Graduate Degree",
+        "text": "Post Graduate Degree"
+      },
+      {
+        "value": "Ph.D",
+        "text": "Ph.D"
+      },
+      {
+        "value": "Others",
+        "text": "Others"
+      }
+    ]
+  },
+  {
+    "id": "crs_name",
+    "name": "crs_name",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "crs_st_num",
+    "name": "crs_st_num",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "crs_year",
+    "name": "crs_year",
+    "type": "select-one",
+    "value": "",
+    "options": [
+      {
+        "value": "",
+        "text": "Select"
+      },
+      {
+        "value": "1",
+        "text": "1"
+      },
+      {
+        "value": "2",
+        "text": "2"
+      },
+      {
+        "value": "3",
+        "text": "3"
+      },
+      {
+        "value": "4",
+        "text": "4"
+      },
+      {
+        "value": "5",
+        "text": "5"
+      },
+      {
+        "value": "6",
+        "text": "Other"
+      }
+    ]
+  },
+  {
+    "id": "police_station",
+    "name": "police_station",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "",
+    "name": "ugc_regulation",
+    "type": "checkbox",
+    "value": "true"
+  },
+  {
+    "id": "",
+    "name": "ugc_judgment",
+    "type": "checkbox",
+    "value": "true"
+  },
+  {
+    "id": "",
+    "name": "ugc_promise",
+    "type": "checkbox",
+    "value": "true"
+  },
+  {
+    "id": "",
+    "name": "ugc_promise2",
+    "type": "checkbox",
+    "value": "true"
+  },
+  {
+    "id": "",
+    "name": "ugc_promise3",
+    "type": "checkbox",
+    "value": "true"
+  },
+  {
+    "id": "sv_ragged",
+    "name": "sv_ragged",
+    "type": "radio",
+    "value": "No"
+  },
+  {
+    "id": "",
+    "name": "sv_ragged",
+    "type": "radio",
+    "value": "Yes"
+  },
+  {
+    "id": "sv_rag",
+    "name": "sv_rag",
+    "type": "radio",
+    "value": "No"
+  },
+  {
+    "id": "",
+    "name": "sv_rag",
+    "type": "radio",
+    "value": "Yes"
+  },
+  {
+    "id": "sv_rg_phn",
+    "name": "sv_rag_phn",
+    "type": "text",
+    "value": ""
+  },
+  {
+    "id": "sv_rag",
+    "name": "sv_rag_hp",
+    "type": "radio",
+    "value": "No"
+  },
+  {
+    "id": "",
+    "name": "sv_rag_hp",
+    "type": "radio",
+    "value": "Mild"
+  },
+  {
+    "id": "",
+    "name": "sv_rag_hp",
+    "type": "radio",
+    "value": "Severe"
+  },
+  {
+    "id": "",
+    "name": "final",
+    "type": "radio",
+    "value": "final"
+  }
+]

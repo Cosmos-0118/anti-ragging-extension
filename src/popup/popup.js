@@ -107,8 +107,8 @@ function selectItem(item, typeLabel) {
         statusMessage.textContent = `${typeLabel} SELECTED SUCCESSFULLY!`;
         statusMessage.className = 'status success';
         
-        // Show the save-details modal instead of auto-closing
-        showSaveModal(item, typeLabel);
+        // Close popup after a short delay
+        setTimeout(() => window.close(), 1000);
       } else {
         statusMessage.textContent = `ERROR SELECTING ${typeLabel}.`;
         statusMessage.className = 'status error';
@@ -117,38 +117,39 @@ function selectItem(item, typeLabel) {
   });
 }
 
-// ===== Save Details Modal =====
-const saveModalOverlay = document.getElementById('save-modal-overlay');
-const modalSaveBtn = document.getElementById('modal-save-btn');
-const modalSkipBtn = document.getElementById('modal-skip-btn');
-const modalCloseBtn = document.getElementById('modal-close-btn');
+// ===== Debug Scraper Modal =====
+const debugScrapeBtn = document.getElementById('debug-scrape-btn');
+const scrapeModalOverlay = document.getElementById('scrape-modal-overlay');
+const scrapeCopyBtn = document.getElementById('scrape-copy-btn');
+const scrapeCloseBtn = document.getElementById('scrape-modal-close-btn');
+const scrapeCloseBtn2 = document.getElementById('scrape-close-btn');
+const scrapeResultTextarea = document.getElementById('scrape-result-textarea');
 
-let pendingSaveItem = null;
-
-function showSaveModal(item, typeLabel) {
-  pendingSaveItem = { value: item.value, text: item.text, selectId: item.selectId, typeLabel };
-  saveModalOverlay.classList.remove('hidden');
-}
-
-function hideModalAndClose() {
-  saveModalOverlay.classList.add('hidden');
-  pendingSaveItem = null;
-  setTimeout(() => window.close(), 400);
-}
-
-// SAVE button — persist to chrome.storage.local
-modalSaveBtn.addEventListener('click', function () {
-  if (pendingSaveItem) {
-    chrome.storage.local.set({ savedSelection: pendingSaveItem }, function () {
-      statusMessage.textContent = 'DETAILS SAVED! ✓';
-      hideModalAndClose();
+debugScrapeBtn.addEventListener('click', () => {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, { action: "SCRAPE_PAGE" }, function (response) {
+      if (chrome.runtime.lastError || !response || !response.scrapedData) {
+        scrapeResultTextarea.value = "ERROR: Could not scrape page. Make sure you are on the anti-ragging form page.";
+      } else {
+        scrapeResultTextarea.value = JSON.stringify(response.scrapedData, null, 2);
+      }
+      scrapeModalOverlay.classList.remove('hidden');
     });
-  }
+  });
 });
 
-// SKIP button — just close
-modalSkipBtn.addEventListener('click', hideModalAndClose);
+scrapeCopyBtn.addEventListener('click', () => {
+  scrapeResultTextarea.select();
+  document.execCommand('copy');
+  const originalText = scrapeCopyBtn.textContent;
+  scrapeCopyBtn.textContent = "COPIED!";
+  setTimeout(() => { scrapeCopyBtn.textContent = originalText; }, 2000);
+});
 
-// ✕ titlebar button — same as skip
-modalCloseBtn.addEventListener('click', hideModalAndClose);
+function hideScrapeModal() {
+  scrapeModalOverlay.classList.add('hidden');
+}
+
+scrapeCloseBtn.addEventListener('click', hideScrapeModal);
+scrapeCloseBtn2.addEventListener('click', hideScrapeModal);
 
