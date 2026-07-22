@@ -2,15 +2,15 @@
 
 <img src="assets/CollegeFinderIcon.png" alt="logo" width="88" style="border-radius:16px; margin-bottom:8px"/>
 
-# Anti-Ragging College Picker
+# Anti-Ragging College Picker & Auto-Filler
 
-**A retro-styled Chrome extension that makes finding and selecting your college on the Anti-Ragging Portal fast and effortless.**
+**A lightning-fast Chrome extension that instantly saves and auto-fills your anti-ragging form details, while making finding and selecting your college fast and effortless.**
 
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-4f46e5?style=flat-square)](https://developer.chrome.com/docs/extensions/mv3/)
-[![Version](https://img.shields.io/badge/version-1.1-059669?style=flat-square)](#)
+[![Version](https://img.shields.io/badge/version-2.0-059669?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-gray?style=flat-square)](#license)
 
-Instantly see and select your college on the Anti-Ragging website — no endless scrolling.
+Instantly see and select your college, and never type out the same details twice.
 
 [Install](#installation) · [How to Use](#how-to-use) · [Privacy & Legal](#privacy--legal)
 
@@ -24,19 +24,18 @@ Instantly see and select your college on the Anti-Ragging website — no endless
 
 ## 🎯 What It Does
 
-The official anti-ragging website requires students to manually scroll through **thousands** of colleges in a dropdown to file a complaint or register. This extension injects a powerful, instant-search popup directly into your browser so you can:
+This extension combines two powerful tools into one seamless experience for the official anti-ragging website:
 
-- **Search by name** — Type any part of your college name and get results instantly.
-- **Search by code** — Enter the `C-XXXXX` or `U-XXXXX` code to jump straight to your institution.
-- **One-click selection** — Click a result and the extension automatically fills the dropdown on the page for you.
+1. **College Picker**: Injects a powerful, instant-search popup directly into your browser to search for your college by name or code and auto-select it in the dropdown.
+2. **Form Auto-Filler**: Automatically intercepts form submissions to save your details locally. When you return, it uses an O(1) matching engine to instantly auto-fill all fields with a sleek Siri-like glow animation.
 
 ---
 
-## ✨ What's New in 1.1
+## ✨ What's New in 2.0
 
-- **Retro Win95 Interface**: A brand new nostalgic aesthetic with clean UI elements.
-- **Improved Site Support**: The extension now works seamlessly on both `antiragging.in` and `www.antiragging.in`.
-- **Enhanced Auto-Selection**: Robust runtime messaging guarantees your chosen college syncs instantly with the portal's dropdown.
+- **Form Auto-Fill Engine**: Complete form-saving and instant restoration capabilities with 100% schema accuracy.
+- **Siri-like Visual Feedback**: Enjoy a sleek, modern neon glow animation on fields as they are auto-filled.
+- **College Picker Improvements**: Robust runtime messaging guarantees your chosen college syncs instantly with the portal's dropdown.
 
 ---
 
