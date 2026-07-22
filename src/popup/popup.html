@@ -15,16 +15,28 @@
       </div>
     </header>
     
-    <div class="search-box">
-      <input type="text" id="search-input" placeholder=">_ SEARCH BY NAME OR CODE..." autocomplete="off" autofocus>
+    <!-- College Picker UI -->
+    <div id="college-picker-ui">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder=">_ SEARCH BY NAME OR CODE..." autocomplete="off" autofocus>
+      </div>
+  
+      <div class="results-container">
+        <ul id="results-list" class="results-list">
+          <li class="loading">CONNECTING TO DATABANK...</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="results-container">
-      <ul id="results-list" class="results-list">
-        <!-- Results will be injected here -->
-        <li class="loading">CONNECTING TO DATABANK...</li>
-      </ul>
+    <!-- Auto-Filler Dashboard UI -->
+    <div id="auto-filler-ui" class="hidden" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+      <div style="font-size: 32px; margin-bottom: 10px;">⚡</div>
+      <div style="font-size: 18px; color: #0f0; margin-bottom: 10px; font-weight: bold;">O(1) ENGINE ACTIVE</div>
+      <p style="font-size: 14px; color: #ccc; margin-bottom: 5px;">Your details are saved and being auto-filled.</p>
+      
+      <button id="clear-data-btn" class="modal-btn" style="margin-top: 20px; font-size: 12px; width: 100%;">[ CLEAR SAVED DATA ]</button>
     </div>
+
     
     <footer class="footer">
       <span id="status-message" class="status">AWAITING INPUT...</span>
