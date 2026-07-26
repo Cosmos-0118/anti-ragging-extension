@@ -4,6 +4,22 @@ let allItems = [];
 const searchInput = document.getElementById('search-input');
 const resultsList = document.getElementById('results-list');
 const statusMessage = document.getElementById('status-message');
+const clearDataBtn = document.getElementById('clear-data-btn');
+
+if (clearDataBtn) {
+  clearDataBtn.addEventListener('click', () => {
+    chrome.storage.local.remove('savedFormData', () => {
+      statusMessage.textContent = 'AUTO-FILL DATA CLEARED.';
+      statusMessage.className = 'status success';
+      setTimeout(() => {
+        if (statusMessage.textContent === 'AUTO-FILL DATA CLEARED.') {
+          statusMessage.textContent = 'AWAITING INPUT...';
+          statusMessage.className = 'status';
+        }
+      }, 2000);
+    });
+  });
+}
 
 // Fetch data from the active tab when popup opens
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {

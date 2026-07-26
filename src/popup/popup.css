@@ -163,6 +163,36 @@ body {
   font-weight: bold;
 }
 
+.footer-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-btn {
+  font-family: 'VT323', monospace;
+  font-size: 14px;
+  padding: 2px 12px;
+  cursor: pointer;
+  background-color: var(--box-bg);
+  color: var(--box-text);
+  border-top: 2px solid var(--border-light);
+  border-left: 2px solid var(--border-light);
+  border-right: 2px solid var(--border-darkest);
+  border-bottom: 2px solid var(--border-darkest);
+}
+
+.footer-btn:active {
+  border-top: 2px solid var(--border-darkest);
+  border-left: 2px solid var(--border-darkest);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.footer-btn:hover {
+  filter: brightness(1.08);
+}
+
 .footer-bottom {
   margin-top: 6px;
   border-top: 1px solid var(--border-dark);
