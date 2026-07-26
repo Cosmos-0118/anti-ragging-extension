@@ -15,11 +15,16 @@ if (clearDataBtn) {
         }
       });
       
+      // Clear the popup list because the state dropdown on the page is now blanked
+      allItems = [];
+      resultsList.innerHTML = '<li class="no-results">NO DATA FOUND. PLEASE SELECT A STATE FIRST.</li>';
+      searchInput.value = '';
+      
       statusMessage.textContent = 'AUTO-FILL DATA CLEARED.';
       statusMessage.className = 'status success';
       setTimeout(() => {
         if (statusMessage.textContent === 'AUTO-FILL DATA CLEARED.') {
-          statusMessage.textContent = 'AWAITING INPUT...';
+          statusMessage.textContent = 'NO DATA.';
           statusMessage.className = 'status';
         }
       }, 2000);
