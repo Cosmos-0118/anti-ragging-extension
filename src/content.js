@@ -267,6 +267,34 @@ document.addEventListener('submit', function(e) {
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   
 
+  if (request.action === "CLEAR_FORM") {
+    filledFields.clear(); // Clear tracked fields so autofill can run again later
+    
+    formSchema.forEach(field => {
+      const elements = getElements(field);
+      if (elements.length === 0) return;
+      
+      if (field.type === 'radio' || field.type === 'checkbox') {
+        elements.forEach(el => {
+          if (el.checked) {
+            el.checked = false;
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        });
+      } else {
+        const el = elements[0];
+        if (el.value !== '') {
+          el.value = '';
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      }
+    });
+    
+    sendResponse({ success: true });
+    return true;
+  }
+
   if (request.action === "GET_COLLEGES") {
     // Find all select elements on the page to support both Universities and Colleges
     const selects = document.querySelectorAll('select');

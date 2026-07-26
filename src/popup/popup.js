@@ -9,6 +9,12 @@ const clearDataBtn = document.getElementById('clear-data-btn');
 if (clearDataBtn) {
   clearDataBtn.addEventListener('click', () => {
     chrome.storage.local.remove('savedFormData', () => {
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        if (tabs && tabs.length > 0) {
+          chrome.tabs.sendMessage(tabs[0].id, { action: "CLEAR_FORM" });
+        }
+      });
+      
       statusMessage.textContent = 'AUTO-FILL DATA CLEARED.';
       statusMessage.className = 'status success';
       setTimeout(() => {
