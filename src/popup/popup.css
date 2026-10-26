@@ -68,6 +68,44 @@ body {
   opacity: 0.8;
 }
 
+.state-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.state-box[hidden] {
+  display: none;
+}
+
+.state-label {
+  flex-shrink: 0;
+}
+
+#state-select {
+  flex-grow: 1;
+  min-width: 0;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  padding: 4px;
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 2px solid var(--border-darkest);
+  border-left: 2px solid var(--border-darkest);
+  border-right: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+  outline: none;
+}
+
+#state-select:focus {
+  background-color: #ffffcc;
+}
+
+#state-select:disabled {
+  color: var(--border-dark);
+}
+
 .search-box {
   margin-bottom: 10px;
 }

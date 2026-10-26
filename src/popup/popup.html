@@ -11,10 +11,17 @@
       <img src="../../assets/CollegeFinderIcon.png" alt="logo" class="header-logo">
       <div class="header-text">
         <h1 class="title">COLLEGE FINDER</h1>
-        <p class="subtitle">v1.0.0 [SYSTEM_READY]</p>
+        <p class="subtitle" id="version-label">[SYSTEM_READY]</p>
       </div>
     </header>
-    
+
+    <div class="state-box" id="state-box" hidden>
+      <label for="state-select" class="state-label">STATE:</label>
+      <select id="state-select">
+        <option value="">-- SELECT STATE TO LOAD LIST --</option>
+      </select>
+    </div>
+
     <div class="search-box">
       <input type="text" id="search-input" placeholder=">_ SEARCH BY NAME OR CODE..." autocomplete="off" autofocus>
     </div>
