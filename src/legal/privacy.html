@@ -95,7 +95,7 @@
     </div>
     <div class="policy-body">
       <p><strong>Effective Date:</strong> July 17, 2026</p>
-      <p><strong>Last Updated:</strong> July 17, 2026</p>
+      <p><strong>Last Updated:</strong> October 31, 2026</p>
 
       <h2>1. Introduction</h2>
       <p>
@@ -106,21 +106,26 @@
       </p>
 
       <h2>2. Information We Collect</h2>
-      <p><strong>We do not collect any personal data.</strong></p>
-      <p>The Extension:</p>
+      <p><strong>We do not collect, receive, or transmit any personal data.</strong></p>
+      <p>The developers of the Extension never see your information. The Extension:</p>
       <ul>
-        <li>Does <strong>not</strong> collect, store, or transmit any personal information.</li>
+        <li>Does <strong>not</strong> send personal information to us or to any server.</li>
         <li>Does <strong>not</strong> track your browsing history or activity.</li>
         <li>Does <strong>not</strong> use cookies or any tracking technologies.</li>
         <li>Does <strong>not</strong> communicate with any external servers or third-party services.</li>
       </ul>
+      <p>
+        If you choose to save form details for auto-fill, those details stay
+        <strong>only on your device</strong>. See section 5.
+      </p>
 
       <h2>3. How the Extension Works</h2>
       <p>The Extension operates entirely within your browser:</p>
       <ul>
-        <li>It reads the list of colleges/universities from the dropdown on the currently active web page.</li>
+        <li>It reads the list of colleges and universities from dropdowns on the Anti-Ragging Portal.</li>
         <li>It displays a searchable list inside the extension popup.</li>
         <li>When you select a college, it sets the value of the dropdown on the page.</li>
+        <li>If you previously saved form details, it can auto-fill those fields on later visits.</li>
         <li>All processing happens locally on your device — no data ever leaves your browser.</li>
       </ul>
 
@@ -129,14 +134,29 @@
       <ul>
         <li><strong>activeTab:</strong> To interact with the currently active tab and read dropdown contents.</li>
         <li><strong>scripting:</strong> To inject the content script that reads and sets dropdown values on the page.</li>
+        <li><strong>storage:</strong> To save and load optional auto-fill details on your device only.</li>
       </ul>
-      <p>These permissions are used solely for the Extension's core functionality and nothing else.</p>
+      <p>
+        The Extension also runs on <code>antiragging.in</code> and
+        <code>www.antiragging.in</code> so it can help you search colleges and fill those forms.
+        These permissions are used solely for the Extension's core functionality and nothing else.
+      </p>
 
       <h2>5. Data Storage</h2>
       <p>
-        The Extension does not store any data locally or remotely. Search results are
-        generated in real-time from the page content and are discarded when the popup is closed.
+        Search results are generated in real time from the page and discarded when the popup is closed.
       </p>
+      <p>
+        If you accept the save prompt after submitting a form, the Extension stores the values you
+        entered (such as name, contact details, college, and related form fields) in
+        Chrome's local storage (<code>chrome.storage.local</code>). That data:
+      </p>
+      <ul>
+        <li>Remains on your device and is never uploaded or shared.</li>
+        <li>Is used only to auto-fill the Anti-Ragging Portal the next time you use it.</li>
+        <li>Can be deleted at any time with the <strong>Clear Saved Data</strong> button in the extension popup.</li>
+      </ul>
+      <p>Uninstalling the Extension also removes this locally stored data.</p>
 
       <h2>6. Third-Party Services</h2>
       <p>
@@ -147,7 +167,8 @@
       <h2>7. Children's Privacy</h2>
       <p>
         The Extension does not knowingly collect any information from anyone, including
-        children under the age of 13.
+        children under the age of 13. Any optional auto-fill data is stored only on the
+        user's own device and is never transmitted.
       </p>
 
       <h2>8. Changes to This Policy</h2>
@@ -159,7 +180,8 @@
       <h2>9. Contact</h2>
       <p>
         If you have any questions or concerns about this Privacy Policy, please open an
-        issue on the project's GitHub repository.
+        issue on the
+        <a href="https://github.com/Cosmos-0118/anti-ragging-extension/issues">project's GitHub repository</a>.
       </p>
     </div>
     <div class="nav-footer">

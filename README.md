@@ -76,8 +76,8 @@ The official anti-ragging website requires students to manually scroll through *
 
 ## 🔒 Privacy & Legal
 
-- [Privacy Policy](src/legal/privacy.html) — We collect **zero** personal data. All auto-fill data is stored locally on your device.
-- [Terms of Service](src/legal/terms.html) — Use at your own discretion; provided as-is.
+- [Privacy Policy](https://cosmos-0118.github.io/anti-ragging-extension/privacy.html) — We collect **zero** personal data. All auto-fill data is stored locally on your device.
+- [Terms of Service](https://cosmos-0118.github.io/anti-ragging-extension/terms.html) — Use at your own discretion; provided as-is.
 
 ---
 
